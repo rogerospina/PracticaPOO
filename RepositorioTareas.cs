@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PracticaPOO
 {
-    public class RepositorioTareas
+    public class RepositorioTareas : IRepositorioTareas
     {
         private readonly ILog logger;
 

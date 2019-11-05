@@ -15,10 +15,10 @@ namespace PracticaPOO
         {
             var serviceProvider = new ServiceCollection()
                 .AddTransient<ILog>(x => new FactoriaLoggers().ObtenerLogger("consola"))
-                .AddTransient<RepositorioTareas>()
-                .AddTransient<RepositorioUsuarios>()
+                .AddTransient<IRepositorioTareas, RepositorioTareas>()
+                .AddTransient<IRepositorioUsuarios, RepositorioUsuarios>()
                 .AddTransient<Mapeador>()
-                .AddTransient<RepositorioResultadoTareasViewModel>()
+                .AddTransient<IRepositorioResultadoTareasViewModel, RepositorioResultadoTareasViewModel>()
                 .AddTransient<ProcesadorDeTareas>()
                 .BuildServiceProvider();
 

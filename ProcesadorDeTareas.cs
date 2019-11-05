@@ -9,16 +9,16 @@ namespace PracticaPOO
     public class ProcesadorDeTareas
     {
         private readonly ILog logger;
-        private readonly RepositorioTareas repositorioTareas;
-        private readonly RepositorioUsuarios repositorioUsuarios;
+        private readonly IRepositorioTareas repositorioTareas;
+        private readonly IRepositorioUsuarios repositorioUsuarios;
         private readonly Mapeador mapeador;
-        private readonly RepositorioResultadoTareasViewModel repositorioResultadoTareasViewModel;
+        private readonly IRepositorioResultadoTareasViewModel repositorioResultadoTareasViewModel;
 
         public ProcesadorDeTareas(ILog logger,
-            RepositorioTareas repositorioTareas,
-            RepositorioUsuarios repositorioUsuarios,
+            IRepositorioTareas repositorioTareas,
+            IRepositorioUsuarios repositorioUsuarios,
             Mapeador mapeador,
-            RepositorioResultadoTareasViewModel repositorioResultadoTareasViewModel)
+            IRepositorioResultadoTareasViewModel repositorioResultadoTareasViewModel)
         {
             this.logger = logger;
             this.repositorioTareas = repositorioTareas;

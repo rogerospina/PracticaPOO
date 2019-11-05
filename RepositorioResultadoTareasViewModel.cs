@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PracticaPOO
 {
-    public class RepositorioResultadoTareasViewModel
+    public class RepositorioResultadoTareasViewModel : IRepositorioResultadoTareasViewModel
     {
         public void Guardar(List<TareaViewModel> tareas)
         {
